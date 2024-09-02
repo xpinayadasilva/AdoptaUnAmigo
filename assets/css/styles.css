@@ -1,0 +1,119 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+*/ DISPLAY MOBILE */
+.grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows:1fr 2fr 5fr 1fr;
+    grid-template-areas:
+       "header header"
+       "sidebar sidebar"
+       "main main"
+       "footer footer";
+    overflow: auto;
+ }
+ 
+ @media (min-width: 576px) {
+    body {
+        font-size: 12px;
+      }
+    .grid {
+       grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";          
+    }
+ }
+ @media (min-width: 992px) {
+    body {
+        font-size: 12px;
+      }
+    .grid {
+       grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";          
+    }
+ }
+ 
+ header {
+    grid-area: header;
+   background-color: cadetblue;
+    color:white;
+    padding: 10px;
+    text-align: center;
+ }
+ header:hover{
+    -webkit-transform: rotate(360deg);transform: rotate(360deg); }
+ 
+ aside {
+    grid-area: sidebar;
+    background-color: beige;
+    color:white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    align-content: flex-start;
+    background-image: url('../imgs/bg_logo.jpg');
+    background-size: cover;    
+ }
+ 
+ main {
+    grid-area: main;
+    text-decoration: none;
+    border: 3px solid midnightblue;
+    padding: 10px;
+    text-align: center;
+    
+ }
+ card  img:hover{
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #ec731e;
+    -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+ }
+ footer {
+    grid-area: footer;    
+    background-color: cadetblue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+ }
+ .pages {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;    
+}
+
+.page-link {
+    background-color: white;
+    border: 1px solid #edf2f4;
+    color: white;
+    padding: 0.7rem 1rem;
+    background-color: cadetblue;
+    text-decoration: none;
+}
+
+.page-link:first-child {
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.page-link:last-child {
+    border-radius: 0 .7rem .7rem 0;
+}
+
+.page-link:hover {
+    background-color: #edf2f4;
+    color: #000;
+}
+
+ 
+ 
